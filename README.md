@@ -1,13 +1,13 @@
-## sensoApi
+# sensoApi
 Simples Api Spring Boot para crud de contatos.
 
-#GET 
+## GET 
 http://localhost:8090/api/v1/contacts/{id}?
 
-#GET
+## GET
 http://localhost:8090/api/v1/contacts/
 
-#POST 
+## POST 
 http://localhost:8090/api/v1/contacts/
 ```
 {
