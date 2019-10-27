@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import com.senso.gate.sensoApi.model.Contact;
 import com.senso.gate.sensoApi.repository.ContactRepository;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping({"api/v1/contacts"})
 public class ContactController {
@@ -39,7 +41,7 @@ public class ContactController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<Contact> create(@RequestBody Contact contact){
+	public ResponseEntity<Contact> create(@Valid @RequestBody Contact contact){
 		Contact contato = repository.save(contact);
 		return new ResponseEntity<>(contato,HttpStatus.CREATED);
 	}
